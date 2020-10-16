@@ -15,3 +15,12 @@ This will add the analysis of the project to Sonarqube. It should contain three 
 
 Licensed under the [GNU Lesser General Public License, Version 3.0](http://www.gnu.org/licenses/lgpl.txt)
 
+
+all courses links:
+
+#DevSecOps #DevOps https://www.udemy.com/course/devsecops
+
+#SonarQube #infosec #security #sast #devops #devsecops https://www.udemy.com/course/sonarqube-master-sonarqube-within-a-few-hours-2020
+
+#google #cloud #serverless #devops #devsecops #computing https://www.udemy.com/course/google-cloud-serverless
+
