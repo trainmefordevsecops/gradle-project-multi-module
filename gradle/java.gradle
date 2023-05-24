@@ -17,28 +17,24 @@ dependencies {
 test {
     workingDir buildDir
 
-    reports {
-        junitXml.enabled = true
-        html.enabled = false
-    }
-
     jacoco {
+        append = false
+        destinationFile = file("$buildDir/jacoco/test.exec")
         excludes = ['**/test/**']
     }
+
 }
 
 jacoco {
     toolVersion = '0.7.7.201606060606'
-    reportsDir = file("$buildDir/reports/jacoco")
 }
 
 jacocoTestReport {
     reports {
         xml.enabled true
         csv.enabled false
-        html.enabled false
+        html.destination file("$buildDir/reports/jacoco")
     }
-
     afterEvaluate {
         classDirectories = files(classDirectories.files.collect {
             fileTree(dir: it, exclude: '**/test/**')
