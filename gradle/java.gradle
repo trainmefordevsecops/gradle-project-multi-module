@@ -1,7 +1,6 @@
 apply plugin: 'java'
 apply plugin: "jacoco"
 
-
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -19,20 +18,21 @@ test {
 
     jacoco {
         append = false
-        destinationFile = file("$buildDir/jacoco/test.exec")
+        //destinationFile = file("$buildDir/jacoco/test.exec")
         excludes = ['**/test/**']
     }
 
 }
 
 jacoco {
-    toolVersion = '0.7.7.201606060606'
+    toolVersion = '0.8.7'
 }
 
 jacocoTestReport {
     reports {
         xml.enabled true
         csv.enabled false
+        //xml.destination = file("$buildDir/reports/jacoco/jacocoTestReport.xml")
         html.destination file("$buildDir/reports/jacoco")
     }
     afterEvaluate {
